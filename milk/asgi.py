@@ -1,18 +1,10 @@
-"""
-ASGI config for milk project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.2/howto/deployment/asgi/
-"""
-
 import os
 from django.core.asgi import get_asgi_application
+from mangum import Mangum
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'milk.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "milk.settings")
 
 application = get_asgi_application()
 
-# ✅ ADD THIS LINE FOR VERCEL
-app = application
+# ✅ THIS IS THE KEY FIX
+app = Mangum(application)
