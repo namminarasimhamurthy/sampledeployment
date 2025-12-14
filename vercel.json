@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "milk/wsgi.py",
+      "src": "milk/asgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "milk/wsgi.py"
+      "dest": "milk/asgi.py"
     }
   ]
 }
