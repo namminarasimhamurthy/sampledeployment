@@ -5,11 +5,5 @@
       "src": "milk/wsgi.py",
       "use": "@vercel/python"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "milk/wsgi.py"
-    }
   ]
 }

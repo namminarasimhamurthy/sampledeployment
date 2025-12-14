@@ -13,4 +13,4 @@ application = get_wsgi_application()
 
 # Vercel expects a callable named `app` or `handler`
 app = application
-handler = application
+
